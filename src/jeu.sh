@@ -6,7 +6,7 @@ source ./config &>/dev/null
 
 read -p "Enter your name: "$'\n' name;
 
-if [ ${#name} -gt $max_characters_in_name ]; then
+if [ ${#name} -gt $max_characters_in_name ]&>/dev/null; then
     echo "max $max_characters_in_name characters"
     exit 1
 fi
@@ -79,7 +79,7 @@ while true; do
 
         if [ $difficulty -eq 1 ]; then
 
-        if [ $(wc -l LEADERBOARDS/LEADERBOARD_lvl1.txt | cut -d' ' -f1) -gt $max_spots_in_leaderboard ];then
+        if [ $(wc -l LEADERBOARDS/LEADERBOARD_lvl1.txt | cut -d' ' -f1) -gt $max_spots_in_leaderboard ]&>/dev/null;then
             echo "The leaderboard is full"
             exit 5
         fi
