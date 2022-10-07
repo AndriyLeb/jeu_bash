@@ -1,0 +1,4 @@
+max_tries=2;
+max_characters_in_name=9;
+max_spots_in_leaderboard=10;
+var_try=0;
